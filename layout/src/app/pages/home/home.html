@@ -1,0 +1,39 @@
+<main class="flex flex-col min-h-screen bg-slate-900">
+    <header class="md-10 text-center md:text-left sm:text-right">
+        <h2 class="text-3xl font-extrabold text-slate-50">Bem-vindo à Aura app</h2>
+        <h1 class="font-bold text-slate-50">What is my perfect crime?</h1>
+        <p class="mt-3 text-lg text-slate-50">Conheça algumas tecnologias front-end</p>
+    </header>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <article *ngFor="let item of requisicao" >
+            <div>
+                <span>{{item.tecnologia}}</span>
+            </div>
+        </article>
+      </div>
+
+
+
+
+
+
+    <p class="mt-3 text-lg text-slate-50">I break into Tiffany's at midnight <br>
+        Do I go for the vault? <br>
+        No! I go for the chandelier, it's priceless <br>
+        As I'm taking it down, a woman catches me<br>
+        She tells me to stop, I say no<br>
+        It's her father's business<br>
+        She's Tiffany, I say no<br>
+        We make love all night<br>
+        In the morning the coops come and I escape in one of their uniforms<br>
+        I tell Tiffany to meet me in Mexico, but I go to Canada<br>
+        I don't trust her<br>
+        Besides, I like the cold.<br>
+        30 years later I get a postcard, I have a son, and he's the chief of police<br>
+        Now this is where the story gets interesting<br>
+        I tell Tiffany to meet by the Trocadero in Paris<br>
+        but I go to Berlin<br>
+        That's where I stashed the chandelier<br>
+    </p>
+</main>
+

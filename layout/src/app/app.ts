@@ -5,10 +5,11 @@ import { Footer } from './layout/footer/footer';
 import { Home } from './pages/home/home';
 import { Farmador } from './pages/farmador/farmador';
 import { Mogador } from './pages/mogador/mogador';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterLink, RouterOutlet,Header, Footer, Home, Farmador, Mogador],
+  imports: [RouterLink, RouterOutlet,Header, Footer, Home, Farmador, Mogador, CommonModule],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

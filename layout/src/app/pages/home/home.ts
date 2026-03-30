@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-home',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
@@ -16,6 +16,10 @@ export class Home {
     {
       tecnologia:'CSS',
       descricao:'Estilização da página',
+    },
+    {
+      tecnologia:'JavaScript',
+      descricao:'Interatividade da página',
     }
   ];
 }

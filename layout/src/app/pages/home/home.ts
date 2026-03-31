@@ -12,15 +12,15 @@ export class Home {
   requisicao = [
     {
       tecnologia:'HTML',
-      descricao:'Estrutura da página',
+      descricao:'Estrutura da página e conteúdo estático da página',
     },
     {
       tecnologia:'CSS',
-      descricao:'Estilização da página',
+      descricao:'Estilização da página e responsividade da página',
     },
     {
       tecnologia:'JavaScript',
-      descricao:'Interatividade da página',
+      descricao:'Interatividade da página e manipulação do DOM',
     }
   ];
 }

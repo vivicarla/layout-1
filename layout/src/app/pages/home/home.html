@@ -1,28 +1,49 @@
-<main class="flex flex-col min-h-screen bg-slate-900 ">
-    <header class="md-10 text-center md:text-left sm:text-right">
-        <h2 class="text-3xl font-extrabold text-slate-50">Bem-vindo à Aura app</h2>
-        <p class="mt-3 text-lg text-slate-50">Conheça algumas tecnologias front-end</p>
-    </header>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-6">
-        <article *ngFor="let item of requisicao"
-            class="bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 p-5 border border-gray-100 hover:-translate-y-1">
-                
-            <div class="flex flex-col gap-3">
+<main class="relative flex flex-col min-h-screen bg-slate-900 overflow-hidden">
 
-                <!-- Título -->
-                <h3 class="text-xl font-semibold text-gray-800">
-                    {{item.tecnologia}}
-                </h3>
+    <!-- Fundo decorativo -->
+    <div class="absolute inset-0">
+        <div class="absolute top-0 left-0 w-72 h-72 bg-blue-500/20 blur-3xl rounded-full"></div>
+        <div class="absolute bottom-0 right-0 w-72 h-72 bg-blue-400/10 blur-3xl rounded-full"></div>
+    </div>
 
-                <!-- Linha decorativa -->
-                <div class="w-10 h-1 bg-blue-500 rounded"></div>
+    <!-- Conteúdo -->
+    <div class="relative z-10">
 
-                <!-- Descrição -->
-                <p class="text-gray-600 text-sm leading-relaxed">
-                    {{item.descricao}}
-                </p>
+        <!-- Header -->
+        <header class="text-center md:text-left px-6 pt-16 pb-10 max-w-6xl mx-auto w-full">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-slate-50 leading-tight">
+                Bem-vindo à <span class="text-blue-400">Aura</span> app
+            </h2>
 
-            </div>
-        </article>
-  </div>
+            <p class="mt-4 text-lg text-slate-300 max-w-xl">
+                Conheça algumas tecnologias front-end
+            </p>
+        </header>
+
+        <!-- Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-6 pb-16 max-w-6xl mx-auto w-full">
+
+            <article *ngFor="let item of requisicao"
+                class="group bg-white/90 backdrop-blur-md rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 p-6 border border-slate-200 hover:-translate-y-2 hover:scale-[1.02]">
+
+                <div class="flex flex-col gap-4">
+
+                    <!-- Título -->
+                    <h3 class="text-xl font-bold text-slate-800 group-hover:text-blue-500 transition">
+                        {{item.tecnologia}}
+                    </h3>
+
+                    <!-- Linha -->
+                    <div class="w-12 h-1 bg-blue-500 rounded-full group-hover:w-16 transition-all duration-300"></div>
+
+                    <!-- Descrição dinâmica -->
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        {{item.descricao}}
+                    </p>
+                </div>
+            </article>
+
+        </div>
+
+    </div>
 </main>
